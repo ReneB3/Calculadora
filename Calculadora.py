@@ -5,27 +5,15 @@ def menu():
             Aqui estan nuestras opciones:
             1- Suma
             2- Multiplicar
+            3- Resta
+            4- Divicion
         '''
         )
-
-def Seguir():
-    Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
-    if Mantener_Operacion == "s" or Mantener_Operacion == "S":
-        print('Okay, seguimos!')
-        Opciones = 1
-    elif Mantener_Operacion ==  "n" or Mantener_Operacion == "N":
-        print('Okay, adios!')
-        Opciones = int(input('Escogue la opcion que necesite: '))      
-    else:
-        print('Valor incorrecto, vuelva a intentar')
-        menu()
-
-
 
 menu()
 Opciones = int(input('Escogue la opcion que necesite: '))
 
-while (Opciones >0 and Opciones <3):
+while (Opciones >0 and Opciones <5):
     if(Opciones==1):
         #SUMA
         lista_de_Valores=[]
@@ -38,20 +26,66 @@ while (Opciones >0 and Opciones <3):
         print(f'La suma de {lista_de_Valores} es: ')
         Suma_Valores = sum(lista_de_Valores)
         print(Suma_Valores)
-        
+
         Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
-        
         if Mantener_Operacion == "s" or Mantener_Operacion == "S":
             print('Okay, seguimos!')
             Opciones = 1
         elif Mantener_Operacion ==  "n" or Mantener_Operacion == "N":
-            Opciones = int(input('Escogue un valor: '))      
+            print('Okay, adios!')
+            menu()
+            Opciones = int(input('Escogue la opcion que necesite: '))      
         else:
             print('Valor incorrecto, vuelva a intentar')
-            menu()
- 
-    elif (Opciones == 2):
+        #Multiplicacion
+    if (Opciones == 2):
         primer_numero = float(input('Primer numero para multiplicar: '))
         segundo_numero = float(input('Segundo numero para multiplicar: '))
         resultado = primer_numero * segundo_numero
+        print(resultado)    
+        
+        Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
+        if Mantener_Operacion == "s" or Mantener_Operacion == "S":
+            print('Okay, seguimos!')
+            Opciones = 1
+        elif Mantener_Operacion ==  "n" or Mantener_Operacion == "N":
+            print('Okay, adios!')
+            menu()
+            Opciones = int(input('Escogue la opcion que necesite: '))      
+        else:
+            print('Valor incorrecto, vuelva a intentar')
+        #Resta
+    if (Opciones==3):
+        primer_numero = float(input('Primer numero para restar: '))
+        segundo_numero = float(input('Segundo numero para restar: '))
+        resultado = primer_numero - segundo_numero
+        print(resultado) 
+        
+        Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
+        if Mantener_Operacion == "s" or Mantener_Operacion == "S":
+            print('Okay, seguimos!')
+            Opciones = 1
+        elif Mantener_Operacion ==  "n" or Mantener_Operacion == "N":
+            print('Okay, adios!')
+            menu()
+            Opciones = int(input('Escogue la opcion que necesite: '))      
+        else:
+            print('Valor incorrecto, vuelva a intentar')
+        #Divicion
+    if  (Opciones==4):
+        primer_numero = float(input('Primer numero para divir: '))
+        segundo_numero = float(input('Segundo numero para dividir: ')) 
+        resultado = primer_numero / segundo_numero
         print(resultado)
+
+        Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
+        if Mantener_Operacion == "s" or Mantener_Operacion == "S":
+            print('Okay, seguimos!')
+            Opciones = 1
+        elif Mantener_Operacion ==  "n" or Mantener_Operacion == "N":
+            print('Okay, adios!')
+            menu()
+            Opciones = int(input('Escogue la opcion que necesite: '))      
+        else:
+            print('Valor incorrecto, vuelva a intentar')
+
