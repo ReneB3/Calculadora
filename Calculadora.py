@@ -74,10 +74,14 @@ while (Opciones >0 and Opciones <5):
         #Divicion
     if  (Opciones==4):
         primer_numero = float(input('Primer numero para divir: '))
-        segundo_numero = float(input('Segundo numero para dividir: ')) 
-        resultado = primer_numero / segundo_numero
-        print(resultado)
-
+        segundo_numero = float(input('Segundo numero para dividir: '))
+        try: 
+            resultado = primer_numero / segundo_numero
+            print(resultado)
+        except ZeroDivisionError:
+            print('No se puede divir entre Zero')
+            print("Intente otra vez")
+            
         Mantener_Operacion = input('Deseas seguir con la oprecacion? ("s" para seguir, "n" para salir): ')
         if Mantener_Operacion == "s" or Mantener_Operacion == "S":
             print('Okay, seguimos!')
